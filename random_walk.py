@@ -7,7 +7,7 @@ class RandomWalk:
         self.file = file_path
         self.prediction = prediction
         self.runs = runs
-        self.compund = 0
+        self.final_price = 0
         self.read_file()
         self.dates = [i + 1 for i in range(len(self.prices) + self.prediction)]
         self.simulations = []
@@ -43,8 +43,8 @@ class RandomWalk:
                     self.origin += self.avg_down
                 simulation += [self.origin]
             self.simulations.append(simulation)
-            self.compund += self.origin
-        self.compund /= self.runs
+            self.final_price += self.origin
+        self.final_price /= self.runs
 
         if self.prediction == 0:
             pass
