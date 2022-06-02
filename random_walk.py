@@ -58,4 +58,5 @@ class RandomWalk:
         for sim in self.simulations:
             plt.plot(self.dates, sim)
         plt.plot(self.dates, self.prices)
+        plt.grid(True)
         plt.show()
